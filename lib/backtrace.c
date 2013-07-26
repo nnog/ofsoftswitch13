@@ -86,7 +86,7 @@ stack_high(void)
 static uintptr_t
 stack_low(void)
 {
-#ifdef __i386__
+#ifdef __i386_nope__
     uintptr_t low;
     asm("movl %%esp,%0" : "=g" (low));
     return low;
